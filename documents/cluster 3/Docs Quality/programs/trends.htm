@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      W3Counter: Browser, OS Market Share Trends          </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/2014-website.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+        <link href="/css/globalstats.css" rel="stylesheet">
+    <script src="/js/highcharts.js"></script>
+    <script src="/js/jquery.slimscroll.js" type="text/javascript"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+    var im_domain = 'awio';
+    var im_project_id = 2;
+    (function(e,t){window._improvely=[];var n=e.getElementsByTagName("script")[0];var r=e.createElement("script");r.type="text/javascript";r.src="https://"+im_domain+".iljmp.com/improvely.js";r.async=true;n.parentNode.insertBefore(r,n);if(typeof t.init=="undefined"){t.init=function(e,t){window._improvely.push(["init",e,t])};t.goal=function(e){window._improvely.push(["goal",e])};t.label=function(e){window._improvely.push(["label",e])}}window.improvely=t;t.init(im_domain,im_project_id)})(document,window.improvely||[])
+    </script>
+    <meta name="google-site-verification" content="0ZPavT651boyurYXRIqXuWxiVPbA9JxO4cj1mFFJu2Q" />  
+
+  </head>
+
+  <body id="body">
+    <div id="wrap">
+
+      <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img style="height: 40px" src="/images/logo_transparent.png" /></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/deals">Deals for Designers</a></li>
+              <li><a href="/globalstats.php">Global Market Share</a></li>
+              <li class="active"><a href="/signup">Free Signup</a></li>
+              <li><a href="/stats">Log In</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        
+      <div style="background: #c1deef">
+    <div class="container-fluid main" style="padding: 0 40px">
+        <div class="row">
+            <div class="col-xs-12" style="padding: 20px 15px">
+                <h1 style="margin: 0; font-weight: bold; font-size: 24px">Web Browser Market Share Trends</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="background: #edece4">
+    <div class="container-fluid main" style="padding: 0 40px">
+
+        <div class="row">
+
+            <div style="float: right; width: 315px; padding-top: 20px; padding-right: 15px" class="hidden-sm hidden-xs">
+
+                <div id="bsap_1303193_1" class="bsarocks bsap_4d92184dbf59b2d764eef15a9eac1d57"></div>
+
+		<br />
+                <div id="bsap_1303193_2" class="bsarocks bsap_4d92184dbf59b2d764eef15a9eac1d57"></div>
+
+                <div style="clear: both; padding-top: 20px">
+                    <a href="http://buysellads.com/buy/detail/99" style="font-weight: bold; display: block; padding: 20px; background: #06c; text-align: center; color: #fff">Advertise on W3Counter &rarr;</a>
+                </div>
+
+            </div>
+
+            <div class="gsleft" style="padding: 0 15px">
+
+                <div class="col-xs-12" style="padding: 20px 0 0 0">
+                    <div id="graph1" style="height: 400px; background: #fff"></div>
+                </div>
+
+                <div class="col-xs-12" style="padding: 20px 0">
+                    <div id="graph2" style="height: 400px; background: #fff"></div>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<div style="background: #c1deef">
+    <div class="container main">
+        <div class="row">
+            <div class="col-xs-12">
+                <div style="margin: 40px 0" class="featurebox">
+                    Don't just read the report, be part of it. Track your website's visitor activity in real-time 
+                    with W3Counter. <a href="/signup">Sign up</a> for your free account.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    var chartoptions = {
+        title: {
+            text: 'Browser Market Share By Month',
+            x: -20 //center
+        },
+        plotOptions: {
+            line: {
+                marker: {
+                    enabled: false
+                },
+                lineWidth: 4
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Share %'
+            },
+            min: 0
+        },
+        xAxis: {
+            categories: [],
+            tickInterval: 6
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        tooltip: {
+            shared: true
+        },
+        series: []
+    };
+
+    var ie = [], firefox = [], chrome = [], safari = [], opera = [];
+
+    chartoptions.xAxis.categories.push('5/07');
+ie.push(['5/07', 67.6]);
+firefox.push(['5/07', 24.9]);
+chrome.push(['5/07', 0]);
+safari.push(['5/07', 2.4]);
+opera.push(['5/07', 1.8]);
+chartoptions.xAxis.categories.push('6/07');
+ie.push(['6/07', 67.4]);
+firefox.push(['6/07', 25.3]);
+chrome.push(['6/07', 0]);
+safari.push(['6/07', 2.3]);
+opera.push(['6/07', 1.8]);
+chartoptions.xAxis.categories.push('7/07');
+ie.push(['7/07', 67.5]);
+firefox.push(['7/07', 25.3]);
+chrome.push(['7/07', 0]);
+safari.push(['7/07', 2.2]);
+opera.push(['7/07', 1.8]);
+chartoptions.xAxis.categories.push('8/07');
+ie.push(['8/07', 67.3]);
+firefox.push(['8/07', 25.7]);
+chrome.push(['8/07', 0]);
+safari.push(['8/07', 2.1]);
+opera.push(['8/07', 1.8]);
+chartoptions.xAxis.categories.push('9/07');
+ie.push(['9/07', 67.2]);
+firefox.push(['9/07', 25.8]);
+chrome.push(['9/07', 0]);
+safari.push(['9/07', 2.1]);
+opera.push(['9/07', 1.8]);
+chartoptions.xAxis.categories.push('10/07');
+ie.push(['10/07', 66.2]);
+firefox.push(['10/07', 26.5]);
+chrome.push(['10/07', 0]);
+safari.push(['10/07', 2.3]);
+opera.push(['10/07', 1.8]);
+chartoptions.xAxis.categories.push('11/07');
+ie.push(['11/07', 63.7]);
+firefox.push(['11/07', 28.1]);
+chrome.push(['11/07', 0]);
+safari.push(['11/07', 2.6]);
+opera.push(['11/07', 2.0]);
+chartoptions.xAxis.categories.push('12/07');
+ie.push(['12/07', 63.5]);
+firefox.push(['12/07', 28.3]);
+chrome.push(['12/07', 0]);
+safari.push(['12/07', 2.6]);
+opera.push(['12/07', 2.0]);
+chartoptions.xAxis.categories.push('1/08');
+ie.push(['1/08', 62.8]);
+firefox.push(['1/08', 29.0]);
+chrome.push(['1/08', 0]);
+safari.push(['1/08', 2.8]);
+opera.push(['1/08', 2.0]);
+chartoptions.xAxis.categories.push('2/08');
+ie.push(['2/08', 62.7]);
+firefox.push(['2/08', 29.0]);
+chrome.push(['2/08', 0]);
+safari.push(['2/08', 2.9]);
+opera.push(['2/08', 2.0]);
+chartoptions.xAxis.categories.push('3/08');
+ie.push(['3/08', 62.7]);
+firefox.push(['3/08', 29.1]);
+chrome.push(['3/08', 0]);
+safari.push(['3/08', 2.8]);
+opera.push(['3/08', 2.0]);
+chartoptions.xAxis.categories.push('4/08');
+ie.push(['4/08', 62.7]);
+firefox.push(['4/08', 29.2]);
+chrome.push(['4/08', 0]);
+safari.push(['4/08', 2.8]);
+opera.push(['4/08', 2.0]);
+chartoptions.xAxis.categories.push('5/08');
+ie.push(['5/08', 62.7]);
+firefox.push(['5/08', 29.3]);
+chrome.push(['5/08', 0]);
+safari.push(['5/08', 2.7]);
+opera.push(['5/08', 2.0]);
+chartoptions.xAxis.categories.push('6/08');
+ie.push(['6/08', 62.7]);
+firefox.push(['6/08', 29.5]);
+chrome.push(['6/08', 0]);
+safari.push(['6/08', 2.6]);
+opera.push(['6/08', 2.0]);
+chartoptions.xAxis.categories.push('7/08');
+ie.push(['7/08', 62.0]);
+firefox.push(['7/08', 30.3]);
+chrome.push(['7/08', 0]);
+safari.push(['7/08', 2.5]);
+opera.push(['7/08', 2.1]);
+chartoptions.xAxis.categories.push('8/08');
+ie.push(['8/08', 60.3]);
+firefox.push(['8/08', 32.3]);
+chrome.push(['8/08', 0]);
+safari.push(['8/08', 2.5]);
+opera.push(['8/08', 2.1]);
+chartoptions.xAxis.categories.push('9/08');
+ie.push(['9/08', 58.8]);
+firefox.push(['9/08', 33.3]);
+chrome.push(['9/08', 0.3]);
+safari.push(['9/08', 2.8]);
+opera.push(['9/08', 2.1]);
+chartoptions.xAxis.categories.push('10/08');
+ie.push(['10/08', 60.5]);
+firefox.push(['10/08', 31.2]);
+chrome.push(['10/08', 0.4]);
+safari.push(['10/08', 3.1]);
+opera.push(['10/08', 2.0]);
+chartoptions.xAxis.categories.push('11/08');
+ie.push(['11/08', 60.3]);
+firefox.push(['11/08', 31.5]);
+chrome.push(['11/08', 0.2]);
+safari.push(['11/08', 3.1]);
+opera.push(['11/08', 2.0]);
+chartoptions.xAxis.categories.push('12/08');
+ie.push(['12/08', 60.1]);
+firefox.push(['12/08', 31.9]);
+chrome.push(['12/08', 0.2]);
+safari.push(['12/08', 2.9]);
+opera.push(['12/08', 2.1]);
+chartoptions.xAxis.categories.push('1/09');
+ie.push(['1/09', 60.1]);
+firefox.push(['1/09', 32.0]);
+chrome.push(['1/09', 0.2]);
+safari.push(['1/09', 2.8]);
+opera.push(['1/09', 2.0]);
+chartoptions.xAxis.categories.push('2/09');
+ie.push(['2/09', 59.9]);
+firefox.push(['2/09', 32.3]);
+chrome.push(['2/09', 0.2]);
+safari.push(['2/09', 2.8]);
+opera.push(['2/09', 2.1]);
+chartoptions.xAxis.categories.push('3/09');
+ie.push(['3/09', 59.5]);
+firefox.push(['3/09', 32.4]);
+chrome.push(['3/09', 0.3]);
+safari.push(['3/09', 2.8]);
+opera.push(['3/09', 2.1]);
+chartoptions.xAxis.categories.push('4/09');
+ie.push(['4/09', 59.1]);
+firefox.push(['4/09', 32.5]);
+chrome.push(['4/09', 0.5]);
+safari.push(['4/09', 3.0]);
+opera.push(['4/09', 2.1]);
+chartoptions.xAxis.categories.push('5/09');
+ie.push(['5/09', 58.9]);
+firefox.push(['5/09', 32.2]);
+chrome.push(['5/09', 0.8]);
+safari.push(['5/09', 3.2]);
+opera.push(['5/09', 2.0]);
+chartoptions.xAxis.categories.push('6/09');
+ie.push(['6/09', 58.4]);
+firefox.push(['6/09', 32.4]);
+chrome.push(['6/09', 1.1]);
+safari.push(['6/09', 3.3]);
+opera.push(['6/09', 2.0]);
+chartoptions.xAxis.categories.push('7/09');
+ie.push(['7/09', 54.3]);
+firefox.push(['7/09', 32.4]);
+chrome.push(['7/09', 3.4]);
+safari.push(['7/09', 4.8]);
+opera.push(['7/09', 1.8]);
+chartoptions.xAxis.categories.push('8/09');
+ie.push(['8/09', 53.8]);
+firefox.push(['8/09', 32.9]);
+chrome.push(['8/09', 3.7]);
+safari.push(['8/09', 5.0]);
+opera.push(['8/09', 1.9]);
+chartoptions.xAxis.categories.push('9/09');
+ie.push(['9/09', 53.3]);
+firefox.push(['9/09', 32.9]);
+chrome.push(['9/09', 3.9]);
+safari.push(['9/09', 5.2]);
+opera.push(['9/09', 2.1]);
+chartoptions.xAxis.categories.push('10/09');
+ie.push(['10/09', 52.6]);
+firefox.push(['10/09', 33.0]);
+chrome.push(['10/09', 4.3]);
+safari.push(['10/09', 5.3]);
+opera.push(['10/09', 2.0]);
+chartoptions.xAxis.categories.push('11/09');
+ie.push(['11/09', 52.5]);
+firefox.push(['11/09', 32.9]);
+chrome.push(['11/09', 4.8]);
+safari.push(['11/09', 5.4]);
+opera.push(['11/09', 1.2]);
+chartoptions.xAxis.categories.push('12/09');
+ie.push(['12/09', 51.1]);
+firefox.push(['12/09', 32.8]);
+chrome.push(['12/09', 5.6]);
+safari.push(['12/09', 5.2]);
+opera.push(['12/09', 2.2]);
+chartoptions.xAxis.categories.push('1/10');
+ie.push(['1/10', 50.4]);
+firefox.push(['1/10', 32.8]);
+chrome.push(['1/10', 6.4]);
+safari.push(['1/10', 5.5]);
+opera.push(['1/10', 2.1]);
+chartoptions.xAxis.categories.push('2/10');
+ie.push(['2/10', 49.6]);
+firefox.push(['2/10', 32.7]);
+chrome.push(['2/10', 6.9]);
+safari.push(['2/10', 5.7]);
+opera.push(['2/10', 2.1]);
+chartoptions.xAxis.categories.push('3/10');
+ie.push(['3/10', 48.8]);
+firefox.push(['3/10', 33.0]);
+chrome.push(['3/10', 7.5]);
+safari.push(['3/10', 5.6]);
+opera.push(['3/10', 2.1]);
+chartoptions.xAxis.categories.push('4/10');
+ie.push(['4/10', 48.2]);
+firefox.push(['4/10', 32.5]);
+chrome.push(['4/10', 8.3]);
+safari.push(['4/10', 5.5]);
+opera.push(['4/10', 2.1]);
+chartoptions.xAxis.categories.push('5/10');
+ie.push(['5/10', 47.3]);
+firefox.push(['5/10', 33.3]);
+chrome.push(['5/10', 8.7]);
+safari.push(['5/10', 5.5]);
+opera.push(['5/10', 2.1]);
+chartoptions.xAxis.categories.push('6/10');
+ie.push(['6/10', 47.8]);
+firefox.push(['6/10', 33.4]);
+chrome.push(['6/10', 9.6]);
+safari.push(['6/10', 3.7]);
+opera.push(['6/10', 2.2]);
+chartoptions.xAxis.categories.push('7/10');
+ie.push(['7/10', 48.0]);
+firefox.push(['7/10', 34.0]);
+chrome.push(['7/10', 10.6]);
+safari.push(['7/10', 2.1]);
+opera.push(['7/10', 2.3]);
+chartoptions.xAxis.categories.push('8/10');
+ie.push(['8/10', 46.1]);
+firefox.push(['8/10', 33.2]);
+chrome.push(['8/10', 11.4]);
+safari.push(['8/10', 4.5]);
+opera.push(['8/10', 1.5]);
+chartoptions.xAxis.categories.push('9/10');
+ie.push(['9/10', 45.3]);
+firefox.push(['9/10', 31.7]);
+chrome.push(['9/10', 11.9]);
+safari.push(['9/10', 5.8]);
+opera.push(['9/10', 1.7]);
+chartoptions.xAxis.categories.push('10/10');
+ie.push(['10/10', 44.0]);
+firefox.push(['10/10', 31.5]);
+chrome.push(['10/10', 12.5]);
+safari.push(['10/10', 5.8]);
+opera.push(['10/10', 2.0]);
+chartoptions.xAxis.categories.push('11/10');
+ie.push(['11/10', 42.5]);
+firefox.push(['11/10', 32.0]);
+chrome.push(['11/10', 13.1]);
+safari.push(['11/10', 6.0]);
+opera.push(['11/10', 2.0]);
+chartoptions.xAxis.categories.push('12/10');
+ie.push(['12/10', 42.1]);
+firefox.push(['12/10', 30.9]);
+chrome.push(['12/10', 13.8]);
+safari.push(['12/10', 6.0]);
+opera.push(['12/10', 2.1]);
+chartoptions.xAxis.categories.push('1/11');
+ie.push(['1/11', 40.6]);
+firefox.push(['1/11', 31.6]);
+chrome.push(['1/11', 14.5]);
+safari.push(['1/11', 6.0]);
+opera.push(['1/11', 2.0]);
+chartoptions.xAxis.categories.push('2/11');
+ie.push(['2/11', 40.6]);
+firefox.push(['2/11', 30.7]);
+chrome.push(['2/11', 15.3]);
+safari.push(['2/11', 6.0]);
+opera.push(['2/11', 2.0]);
+chartoptions.xAxis.categories.push('3/11');
+ie.push(['3/11', 39.9]);
+firefox.push(['3/11', 30.5]);
+chrome.push(['3/11', 15.8]);
+safari.push(['3/11', 6.1]);
+opera.push(['3/11', 2.0]);
+chartoptions.xAxis.categories.push('4/11');
+ie.push(['4/11', 38.9]);
+firefox.push(['4/11', 30.4]);
+chrome.push(['4/11', 16.1]);
+safari.push(['4/11', 6.4]);
+opera.push(['4/11', 1.4]);
+chartoptions.xAxis.categories.push('5/11');
+ie.push(['5/11', 38.8]);
+firefox.push(['5/11', 29.1]);
+chrome.push(['5/11', 17.3]);
+safari.push(['5/11', 6.6]);
+opera.push(['5/11', 2.2]);
+chartoptions.xAxis.categories.push('6/11');
+ie.push(['6/11', 37.1]);
+firefox.push(['6/11', 28.8]);
+chrome.push(['6/11', 19.1]);
+safari.push(['6/11', 6.4]);
+opera.push(['6/11', 2.5]);
+chartoptions.xAxis.categories.push('7/11');
+ie.push(['7/11', 36.3]);
+firefox.push(['7/11', 28.2]);
+chrome.push(['7/11', 20.0]);
+safari.push(['7/11', 6.5]);
+opera.push(['7/11', 2.4]);
+chartoptions.xAxis.categories.push('8/11');
+ie.push(['8/11', 36.2]);
+firefox.push(['8/11', 27.2]);
+chrome.push(['8/11', 20.7]);
+safari.push(['8/11', 6.3]);
+opera.push(['8/11', 2.3]);
+chartoptions.xAxis.categories.push('9/11');
+ie.push(['9/11', 36.0]);
+firefox.push(['9/11', 26.7]);
+chrome.push(['9/11', 21.4]);
+safari.push(['9/11', 6.2]);
+opera.push(['9/11', 2.4]);
+chartoptions.xAxis.categories.push('10/11');
+ie.push(['10/11', 35.0]);
+firefox.push(['10/11', 26.7]);
+chrome.push(['10/11', 22.6]);
+safari.push(['10/11', 6.5]);
+opera.push(['10/11', 2.4]);
+chartoptions.xAxis.categories.push('11/11');
+ie.push(['11/11', 33.8]);
+firefox.push(['11/11', 26.2]);
+chrome.push(['11/11', 23.4]);
+safari.push(['11/11', 6.4]);
+opera.push(['11/11', 2.5]);
+chartoptions.xAxis.categories.push('12/11');
+ie.push(['12/11', 32.1]);
+firefox.push(['12/11', 26.2]);
+chrome.push(['12/11', 24.6]);
+safari.push(['12/11', 6.5]);
+opera.push(['12/11', 2.7]);
+chartoptions.xAxis.categories.push('1/12');
+ie.push(['1/12', 31.7]);
+firefox.push(['1/12', 25.5]);
+chrome.push(['1/12', 25.3]);
+safari.push(['1/12', 6.7]);
+opera.push(['1/12', 2.5]);
+chartoptions.xAxis.categories.push('2/12');
+ie.push(['2/12', 31.6]);
+firefox.push(['2/12', 25.1]);
+chrome.push(['2/12', 25.8]);
+safari.push(['2/12', 6.7]);
+opera.push(['2/12', 2.3]);
+chartoptions.xAxis.categories.push('3/12');
+ie.push(['3/12', 31.0]);
+firefox.push(['3/12', 25.1]);
+chrome.push(['3/12', 26.1]);
+safari.push(['3/12', 6.6]);
+opera.push(['3/12', 2.2]);
+chartoptions.xAxis.categories.push('4/12');
+ie.push(['4/12', 29.9]);
+firefox.push(['4/12', 24.9]);
+chrome.push(['4/12', 26.7]);
+safari.push(['4/12', 6.7]);
+opera.push(['4/12', 2.2]);
+chartoptions.xAxis.categories.push('5/12');
+ie.push(['5/12', 29.9]);
+firefox.push(['5/12', 24.2]);
+chrome.push(['5/12', 27.4]);
+safari.push(['5/12', 6.5]);
+opera.push(['5/12', 2.4]);
+chartoptions.xAxis.categories.push('6/12');
+ie.push(['6/12', 30.0]);
+firefox.push(['6/12', 23.1]);
+chrome.push(['6/12', 28.1]);
+safari.push(['6/12', 6.5]);
+opera.push(['6/12', 2.4]);
+chartoptions.xAxis.categories.push('7/12');
+ie.push(['7/12', 28.6]);
+firefox.push(['7/12', 23.1]);
+chrome.push(['7/12', 28.3]);
+safari.push(['7/12', 13.3]);
+opera.push(['7/12', 2.2]);
+chartoptions.xAxis.categories.push('8/12');
+ie.push(['8/12', 27.6]);
+firefox.push(['8/12', 22.8]);
+chrome.push(['8/12', 28.3]);
+safari.push(['8/12', 14.4]);
+opera.push(['8/12', 2.2]);
+chartoptions.xAxis.categories.push('9/12');
+ie.push(['9/12', 27.6]);
+firefox.push(['9/12', 22.9]);
+chrome.push(['9/12', 28.4]);
+safari.push(['9/12', 14.1]);
+opera.push(['9/12', 2.3]);
+chartoptions.xAxis.categories.push('10/12');
+ie.push(['10/12', 27.4]);
+firefox.push(['10/12', 22.1]);
+chrome.push(['10/12', 29.1]);
+safari.push(['10/12', 14.1]);
+opera.push(['10/12', 2.4]);
+chartoptions.xAxis.categories.push('11/12');
+ie.push(['11/12', 28.0]);
+firefox.push(['11/12', 21.3]);
+chrome.push(['11/12', 29.3]);
+safari.push(['11/12', 14.3]);
+opera.push(['11/12', 2.3]);
+chartoptions.xAxis.categories.push('12/12');
+ie.push(['12/12', 27.8]);
+firefox.push(['12/12', 20.2]);
+chrome.push(['12/12', 29.5]);
+safari.push(['12/12', 14.8]);
+opera.push(['12/12', 2.5]);
+chartoptions.xAxis.categories.push('1/13');
+ie.push(['1/13', 27.6]);
+firefox.push(['1/13', 20.0]);
+chrome.push(['1/13', 30.0]);
+safari.push(['1/13', 14.8]);
+opera.push(['1/13', 2.3]);
+chartoptions.xAxis.categories.push('2/13');
+ie.push(['2/13', 26.7]);
+firefox.push(['2/13', 19.7]);
+chrome.push(['2/13', 29.3]);
+safari.push(['2/13', 15.4]);
+opera.push(['2/13', 2.4]);
+chartoptions.xAxis.categories.push('3/13');
+ie.push(['3/13', 24.6]);
+firefox.push(['3/13', 19.4]);
+chrome.push(['3/13', 30.3]);
+safari.push(['3/13', 16.3]);
+opera.push(['3/13', 2.3]);
+chartoptions.xAxis.categories.push('4/13');
+ie.push(['4/13', 23.1]);
+firefox.push(['4/13', 20.7]);
+chrome.push(['4/13', 31.5]);
+safari.push(['4/13', 15.1]);
+opera.push(['4/13', 2.3]);
+chartoptions.xAxis.categories.push('5/13');
+ie.push(['5/13', 22.5]);
+firefox.push(['5/13', 19.6]);
+chrome.push(['5/13', 33.0]);
+safari.push(['5/13', 15.2]);
+opera.push(['5/13', 2.2]);
+chartoptions.xAxis.categories.push('6/13');
+ie.push(['6/13', 21.9]);
+firefox.push(['6/13', 19.7]);
+chrome.push(['6/13', 32.8]);
+safari.push(['6/13', 15.5]);
+opera.push(['6/13', 2.2]);
+chartoptions.xAxis.categories.push('7/13');
+ie.push(['7/13', 22.8]);
+firefox.push(['7/13', 19.0]);
+chrome.push(['7/13', 33.2]);
+safari.push(['7/13', 15.1]);
+opera.push(['7/13', 2.4]);
+chartoptions.xAxis.categories.push('8/13');
+ie.push(['8/13', 24.9]);
+firefox.push(['8/13', 18.5]);
+chrome.push(['8/13', 32.8]);
+safari.push(['8/13', 14.7]);
+opera.push(['8/13', 2.5]);
+chartoptions.xAxis.categories.push('9/13');
+ie.push(['9/13', 26.2]);
+firefox.push(['9/13', 17.5]);
+chrome.push(['9/13', 32.6]);
+safari.push(['9/13', 14.9]);
+opera.push(['9/13', 2.5]);
+chartoptions.xAxis.categories.push('10/13');
+ie.push(['10/13', 29.1]);
+firefox.push(['10/13', 16.8]);
+chrome.push(['10/13', 32.0]);
+safari.push(['10/13', 13.7]);
+opera.push(['10/13', 2.4]);
+chartoptions.xAxis.categories.push('11/13');
+ie.push(['11/13', 26.9]);
+firefox.push(['11/13', 17.1]);
+chrome.push(['11/13', 34.1]);
+safari.push(['11/13', 13.6]);
+opera.push(['11/13', 2.4]);
+chartoptions.xAxis.categories.push('12/13');
+ie.push(['12/13', 21.9]);
+firefox.push(['12/13', 18.0]);
+chrome.push(['12/13', 33.7]);
+safari.push(['12/13', 16.9]);
+opera.push(['12/13', 2.8]);
+chartoptions.xAxis.categories.push('1/14');
+ie.push(['1/14', 20.3]);
+firefox.push(['1/14', 18.3]);
+chrome.push(['1/14', 34.2]);
+safari.push(['1/14', 17.8]);
+opera.push(['1/14', 2.7]);
+chartoptions.xAxis.categories.push('2/14');
+ie.push(['2/14', 19.6]);
+firefox.push(['2/14', 18.3]);
+chrome.push(['2/14', 36.4]);
+safari.push(['2/14', 16.7]);
+opera.push(['2/14', 2.6]);
+chartoptions.xAxis.categories.push('3/14');
+ie.push(['3/14', 18.3]);
+firefox.push(['3/14', 18.1]);
+chrome.push(['3/14', 37.2]);
+safari.push(['3/14', 16.6]);
+opera.push(['3/14', 2.9]);
+chartoptions.xAxis.categories.push('4/14');
+ie.push(['4/14', 18.0]);
+firefox.push(['4/14', 18.5]);
+chrome.push(['4/14', 37.1]);
+safari.push(['4/14', 17.1]);
+opera.push(['4/14', 2.8]);
+chartoptions.xAxis.categories.push('5/14');
+ie.push(['5/14', 19.1]);
+firefox.push(['5/14', 17.7]);
+chrome.push(['5/14', 37.0]);
+safari.push(['5/14', 16.7]);
+opera.push(['5/14', 3.0]);
+chartoptions.xAxis.categories.push('6/14');
+ie.push(['6/14', 19.0]);
+firefox.push(['6/14', 16.8]);
+chrome.push(['6/14', 38.0]);
+safari.push(['6/14', 16.0]);
+opera.push(['6/14', 3.2]);
+chartoptions.xAxis.categories.push('7/14');
+ie.push(['7/14', 21.2]);
+firefox.push(['7/14', 15.2]);
+chrome.push(['7/14', 38.5]);
+safari.push(['7/14', 15.4]);
+opera.push(['7/14', 3.1]);
+chartoptions.xAxis.categories.push('8/14');
+ie.push(['8/14', 21.1]);
+firefox.push(['8/14', 15.5]);
+chrome.push(['8/14', 38.0]);
+safari.push(['8/14', 15.5]);
+opera.push(['8/14', 3.2]);
+chartoptions.xAxis.categories.push('9/14');
+ie.push(['9/14', 18.2]);
+firefox.push(['9/14', 16.3]);
+chrome.push(['9/14', 40.0]);
+safari.push(['9/14', 15.4]);
+opera.push(['9/14', 3.2]);
+chartoptions.xAxis.categories.push('10/14');
+ie.push(['10/14', 17.9]);
+firefox.push(['10/14', 16.0]);
+chrome.push(['10/14', 40.8]);
+safari.push(['10/14', 15.2]);
+opera.push(['10/14', 3.3]);
+chartoptions.xAxis.categories.push('11/14');
+ie.push(['11/14', 15.8]);
+firefox.push(['11/14', 16.4]);
+chrome.push(['11/14', 42.7]);
+safari.push(['11/14', 15.0]);
+opera.push(['11/14', 3.3]);
+chartoptions.xAxis.categories.push('12/14');
+ie.push(['12/14', 17.6]);
+firefox.push(['12/14', 15.6]);
+chrome.push(['12/14', 42.5]);
+safari.push(['12/14', 14.6]);
+opera.push(['12/14', 3.2]);
+chartoptions.xAxis.categories.push('1/15');
+ie.push(['1/15', 17.2]);
+firefox.push(['1/15', 15.1]);
+chrome.push(['1/15', 43.0]);
+safari.push(['1/15', 15.2]);
+opera.push(['1/15', 3.1]);
+chartoptions.xAxis.categories.push('2/15');
+ie.push(['2/15', 16.9]);
+firefox.push(['2/15', 14.8]);
+chrome.push(['2/15', 42.8]);
+safari.push(['2/15', 15.5]);
+opera.push(['2/15', 3.2]);
+chartoptions.xAxis.categories.push('3/15');
+ie.push(['3/15', 16.1]);
+firefox.push(['3/15', 14.6]);
+chrome.push(['3/15', 43.9]);
+safari.push(['3/15', 15.7]);
+opera.push(['3/15', 3.2]);
+chartoptions.xAxis.categories.push('4/15');
+ie.push(['4/15', 16.3]);
+firefox.push(['4/15', 14.5]);
+chrome.push(['4/15', 43.7]);
+safari.push(['4/15', 15.9]);
+opera.push(['4/15', 3.1]);
+chartoptions.xAxis.categories.push('5/15');
+ie.push(['5/15', 15.6]);
+firefox.push(['5/15', 14.2]);
+chrome.push(['5/15', 44.5]);
+safari.push(['5/15', 16.1]);
+opera.push(['5/15', 3.3]);
+chartoptions.xAxis.categories.push('6/15');
+ie.push(['6/15', 13.4]);
+firefox.push(['6/15', 14.4]);
+chrome.push(['6/15', 45.8]);
+safari.push(['6/15', 16.2]);
+opera.push(['6/15', 3.5]);
+chartoptions.xAxis.categories.push('7/15');
+ie.push(['7/15', 13.5]);
+firefox.push(['7/15', 13.2]);
+chrome.push(['7/15', 46.2]);
+safari.push(['7/15', 16.4]);
+opera.push(['7/15', 3.9]);
+chartoptions.xAxis.categories.push('8/15');
+ie.push(['8/15', 13.1]);
+firefox.push(['8/15', 13.3]);
+chrome.push(['8/15', 46.5]);
+safari.push(['8/15', 16.5]);
+opera.push(['8/15', 3.7]);
+
+    chartoptions.series.push({name: 'Internet Explorer', data: ie });
+    chartoptions.series.push({name: 'Firefox', data: firefox });
+    chartoptions.series.push({name: 'Chrome', data: chrome });
+    chartoptions.series.push({name: 'Safari', data: safari });
+    chartoptions.series.push({name: 'Opera', data: opera });
+
+    $('#graph1').highcharts(chartoptions);
+
+    chartoptions.series = [];
+    chartoptions.xAxis.categories = [];
+    var ie6 = [], ie7 = [], ie8 = [], ie9 = [], ie10 = [], ie11 = [], ie12 = [];
+    chartoptions.xAxis.categories.push('5/07');
+ie6.push(['5/07', 49.8]);
+ie7.push(['5/07', 17.1]);
+ie8.push(['5/07', 0]);
+ie9.push(['5/07', 0]);
+ie10.push(['5/07', 0]);
+ie11.push(['5/07', 0]);
+ie12.push(['5/07', 0]);
+chartoptions.xAxis.categories.push('6/07');
+ie6.push(['6/07', 49.6]);
+ie7.push(['6/07', 17.2]);
+ie8.push(['6/07', 0]);
+ie9.push(['6/07', 0]);
+ie10.push(['6/07', 0]);
+ie11.push(['6/07', 0]);
+ie12.push(['6/07', 0]);
+chartoptions.xAxis.categories.push('7/07');
+ie6.push(['7/07', 48.9]);
+ie7.push(['7/07', 18.1]);
+ie8.push(['7/07', 0]);
+ie9.push(['7/07', 0]);
+ie10.push(['7/07', 0]);
+ie11.push(['7/07', 0]);
+ie12.push(['7/07', 0]);
+chartoptions.xAxis.categories.push('8/07');
+ie6.push(['8/07', 47.7]);
+ie7.push(['8/07', 19.1]);
+ie8.push(['8/07', 0]);
+ie9.push(['8/07', 0]);
+ie10.push(['8/07', 0]);
+ie11.push(['8/07', 0]);
+ie12.push(['8/07', 0]);
+chartoptions.xAxis.categories.push('9/07');
+ie6.push(['9/07', 47.0]);
+ie7.push(['9/07', 19.7]);
+ie8.push(['9/07', 0]);
+ie9.push(['9/07', 0]);
+ie10.push(['9/07', 0]);
+ie11.push(['9/07', 0]);
+ie12.push(['9/07', 0]);
+chartoptions.xAxis.categories.push('10/07');
+ie6.push(['10/07', 45.7]);
+ie7.push(['10/07', 20.0]);
+ie8.push(['10/07', 0]);
+ie9.push(['10/07', 0]);
+ie10.push(['10/07', 0]);
+ie11.push(['10/07', 0]);
+ie12.push(['10/07', 0]);
+chartoptions.xAxis.categories.push('11/07');
+ie6.push(['11/07', 43.8]);
+ie7.push(['11/07', 19.4]);
+ie8.push(['11/07', 0]);
+ie9.push(['11/07', 0]);
+ie10.push(['11/07', 0]);
+ie11.push(['11/07', 0]);
+ie12.push(['11/07', 0]);
+chartoptions.xAxis.categories.push('12/07');
+ie6.push(['12/07', 43.3]);
+ie7.push(['12/07', 19.8]);
+ie8.push(['12/07', 0]);
+ie9.push(['12/07', 0]);
+ie10.push(['12/07', 0]);
+ie11.push(['12/07', 0]);
+ie12.push(['12/07', 0]);
+chartoptions.xAxis.categories.push('1/08');
+ie6.push(['1/08', 40.5]);
+ie7.push(['1/08', 21.9]);
+ie8.push(['1/08', 0]);
+ie9.push(['1/08', 0]);
+ie10.push(['1/08', 0]);
+ie11.push(['1/08', 0]);
+ie12.push(['1/08', 0]);
+chartoptions.xAxis.categories.push('2/08');
+ie6.push(['2/08', 39.4]);
+ie7.push(['2/08', 22.9]);
+ie8.push(['2/08', 0]);
+ie9.push(['2/08', 0]);
+ie10.push(['2/08', 0]);
+ie11.push(['2/08', 0]);
+ie12.push(['2/08', 0]);
+chartoptions.xAxis.categories.push('3/08');
+ie6.push(['3/08', 38.6]);
+ie7.push(['3/08', 23.8]);
+ie8.push(['3/08', 0]);
+ie9.push(['3/08', 0]);
+ie10.push(['3/08', 0]);
+ie11.push(['3/08', 0]);
+ie12.push(['3/08', 0]);
+chartoptions.xAxis.categories.push('4/08');
+ie6.push(['4/08', 38.0]);
+ie7.push(['4/08', 24.4]);
+ie8.push(['4/08', 0.0]);
+ie9.push(['4/08', 0]);
+ie10.push(['4/08', 0]);
+ie11.push(['4/08', 0]);
+ie12.push(['4/08', 0]);
+chartoptions.xAxis.categories.push('5/08');
+ie6.push(['5/08', 37.4]);
+ie7.push(['5/08', 25.1]);
+ie8.push(['5/08', 0.0]);
+ie9.push(['5/08', 0]);
+ie10.push(['5/08', 0]);
+ie11.push(['5/08', 0]);
+ie12.push(['5/08', 0]);
+chartoptions.xAxis.categories.push('6/08');
+ie6.push(['6/08', 36.8]);
+ie7.push(['6/08', 25.6]);
+ie8.push(['6/08', 0.0]);
+ie9.push(['6/08', 0]);
+ie10.push(['6/08', 0]);
+ie11.push(['6/08', 0]);
+ie12.push(['6/08', 0]);
+chartoptions.xAxis.categories.push('7/08');
+ie6.push(['7/08', 35.2]);
+ie7.push(['7/08', 26.5]);
+ie8.push(['7/08', 0.0]);
+ie9.push(['7/08', 0]);
+ie10.push(['7/08', 0]);
+ie11.push(['7/08', 0]);
+ie12.push(['7/08', 0]);
+chartoptions.xAxis.categories.push('8/08');
+ie6.push(['8/08', 30.7]);
+ie7.push(['8/08', 29.3]);
+ie8.push(['8/08', 0.0]);
+ie9.push(['8/08', 0]);
+ie10.push(['8/08', 0]);
+ie11.push(['8/08', 0]);
+ie12.push(['8/08', 0]);
+chartoptions.xAxis.categories.push('9/08');
+ie6.push(['9/08', 28.9]);
+ie7.push(['9/08', 29.6]);
+ie8.push(['9/08', 0.1]);
+ie9.push(['9/08', 0]);
+ie10.push(['9/08', 0]);
+ie11.push(['9/08', 0]);
+ie12.push(['9/08', 0]);
+chartoptions.xAxis.categories.push('10/08');
+ie6.push(['10/08', 29.9]);
+ie7.push(['10/08', 30.3]);
+ie8.push(['10/08', 0.2]);
+ie9.push(['10/08', 0]);
+ie10.push(['10/08', 0]);
+ie11.push(['10/08', 0]);
+ie12.push(['10/08', 0]);
+chartoptions.xAxis.categories.push('11/08');
+ie6.push(['11/08', 28.8]);
+ie7.push(['11/08', 31.1]);
+ie8.push(['11/08', 0.3]);
+ie9.push(['11/08', 0]);
+ie10.push(['11/08', 0]);
+ie11.push(['11/08', 0]);
+ie12.push(['11/08', 0]);
+chartoptions.xAxis.categories.push('12/08');
+ie6.push(['12/08', 28.0]);
+ie7.push(['12/08', 31.6]);
+ie8.push(['12/08', 0.3]);
+ie9.push(['12/08', 0]);
+ie10.push(['12/08', 0]);
+ie11.push(['12/08', 0]);
+ie12.push(['12/08', 0]);
+chartoptions.xAxis.categories.push('1/09');
+ie6.push(['1/09', 27.6]);
+ie7.push(['1/09', 32.0]);
+ie8.push(['1/09', 0.4]);
+ie9.push(['1/09', 0]);
+ie10.push(['1/09', 0]);
+ie11.push(['1/09', 0]);
+ie12.push(['1/09', 0]);
+chartoptions.xAxis.categories.push('2/09');
+ie6.push(['2/09', 26.8]);
+ie7.push(['2/09', 32.6]);
+ie8.push(['2/09', 0.4]);
+ie9.push(['2/09', 0]);
+ie10.push(['2/09', 0]);
+ie11.push(['2/09', 0]);
+ie12.push(['2/09', 0]);
+chartoptions.xAxis.categories.push('3/09');
+ie6.push(['3/09', 26.2]);
+ie7.push(['3/09', 32.6]);
+ie8.push(['3/09', 0.6]);
+ie9.push(['3/09', 0]);
+ie10.push(['3/09', 0]);
+ie11.push(['3/09', 0]);
+ie12.push(['3/09', 0]);
+chartoptions.xAxis.categories.push('4/09');
+ie6.push(['4/09', 25.8]);
+ie7.push(['4/09', 32.3]);
+ie8.push(['4/09', 0.9]);
+ie9.push(['4/09', 0]);
+ie10.push(['4/09', 0]);
+ie11.push(['4/09', 0]);
+ie12.push(['4/09', 0]);
+chartoptions.xAxis.categories.push('5/09');
+ie6.push(['5/09', 25.4]);
+ie7.push(['5/09', 31.7]);
+ie8.push(['5/09', 1.7]);
+ie9.push(['5/09', 0]);
+ie10.push(['5/09', 0]);
+ie11.push(['5/09', 0]);
+ie12.push(['5/09', 0]);
+chartoptions.xAxis.categories.push('6/09');
+ie6.push(['6/09', 24.6]);
+ie7.push(['6/09', 31.2]);
+ie8.push(['6/09', 2.4]);
+ie9.push(['6/09', 0]);
+ie10.push(['6/09', 0]);
+ie11.push(['6/09', 0]);
+ie12.push(['6/09', 0]);
+chartoptions.xAxis.categories.push('7/09');
+ie6.push(['7/09', 15.6]);
+ie7.push(['7/09', 25.3]);
+ie8.push(['7/09', 13.4]);
+ie9.push(['7/09', 0]);
+ie10.push(['7/09', 0]);
+ie11.push(['7/09', 0]);
+ie12.push(['7/09', 0]);
+chartoptions.xAxis.categories.push('8/09');
+ie6.push(['8/09', 14.4]);
+ie7.push(['8/09', 23.6]);
+ie8.push(['8/09', 15.7]);
+ie9.push(['8/09', 0]);
+ie10.push(['8/09', 0]);
+ie11.push(['8/09', 0]);
+ie12.push(['8/09', 0]);
+chartoptions.xAxis.categories.push('9/09');
+ie6.push(['9/09', 13.7]);
+ie7.push(['9/09', 22.5]);
+ie8.push(['9/09', 17.1]);
+ie9.push(['9/09', 0]);
+ie10.push(['9/09', 0]);
+ie11.push(['9/09', 0]);
+ie12.push(['9/09', 0]);
+chartoptions.xAxis.categories.push('10/09');
+ie6.push(['10/09', 13.2]);
+ie7.push(['10/09', 19.9]);
+ie8.push(['10/09', 19.6]);
+ie9.push(['10/09', 0]);
+ie10.push(['10/09', 0]);
+ie11.push(['10/09', 0]);
+ie12.push(['10/09', 0]);
+chartoptions.xAxis.categories.push('11/09');
+ie6.push(['11/09', 12.9]);
+ie7.push(['11/09', 17.8]);
+ie8.push(['11/09', 21.8]);
+ie9.push(['11/09', 0]);
+ie10.push(['11/09', 0]);
+ie11.push(['11/09', 0]);
+ie12.push(['11/09', 0]);
+chartoptions.xAxis.categories.push('12/09');
+ie6.push(['12/09', 11.6]);
+ie7.push(['12/09', 16.7]);
+ie8.push(['12/09', 22.8]);
+ie9.push(['12/09', 0]);
+ie10.push(['12/09', 0]);
+ie11.push(['12/09', 0]);
+ie12.push(['12/09', 0]);
+chartoptions.xAxis.categories.push('1/10');
+ie6.push(['1/10', 10.6]);
+ie7.push(['1/10', 15.8]);
+ie8.push(['1/10', 24.0]);
+ie9.push(['1/10', 0]);
+ie10.push(['1/10', 0]);
+ie11.push(['1/10', 0]);
+ie12.push(['1/10', 0]);
+chartoptions.xAxis.categories.push('2/10');
+ie6.push(['2/10', 10.0]);
+ie7.push(['2/10', 14.7]);
+ie8.push(['2/10', 24.9]);
+ie9.push(['2/10', 0]);
+ie10.push(['2/10', 0]);
+ie11.push(['2/10', 0]);
+ie12.push(['2/10', 0]);
+chartoptions.xAxis.categories.push('3/10');
+ie6.push(['3/10', 9.4]);
+ie7.push(['3/10', 14.3]);
+ie8.push(['3/10', 25.1]);
+ie9.push(['3/10', 0]);
+ie10.push(['3/10', 0]);
+ie11.push(['3/10', 0]);
+ie12.push(['3/10', 0]);
+chartoptions.xAxis.categories.push('4/10');
+ie6.push(['4/10', 8.5]);
+ie7.push(['4/10', 13.9]);
+ie8.push(['4/10', 25.9]);
+ie9.push(['4/10', 0]);
+ie10.push(['4/10', 0]);
+ie11.push(['4/10', 0]);
+ie12.push(['4/10', 0]);
+chartoptions.xAxis.categories.push('5/10');
+ie6.push(['5/10', 7.9]);
+ie7.push(['5/10', 13.2]);
+ie8.push(['5/10', 26.2]);
+ie9.push(['5/10', 0]);
+ie10.push(['5/10', 0]);
+ie11.push(['5/10', 0]);
+ie12.push(['5/10', 0]);
+chartoptions.xAxis.categories.push('6/10');
+ie6.push(['6/10', 7.8]);
+ie7.push(['6/10', 12.8]);
+ie8.push(['6/10', 27.2]);
+ie9.push(['6/10', 0]);
+ie10.push(['6/10', 0]);
+ie11.push(['6/10', 0]);
+ie12.push(['6/10', 0]);
+chartoptions.xAxis.categories.push('7/10');
+ie6.push(['7/10', 7.3]);
+ie7.push(['7/10', 12.3]);
+ie8.push(['7/10', 28.3]);
+ie9.push(['7/10', 0]);
+ie10.push(['7/10', 0]);
+ie11.push(['7/10', 0]);
+ie12.push(['7/10', 0]);
+chartoptions.xAxis.categories.push('8/10');
+ie6.push(['8/10', 6.7]);
+ie7.push(['8/10', 11.0]);
+ie8.push(['8/10', 28.4]);
+ie9.push(['8/10', 0.0]);
+ie10.push(['8/10', 0]);
+ie11.push(['8/10', 0]);
+ie12.push(['8/10', 0]);
+chartoptions.xAxis.categories.push('9/10');
+ie6.push(['9/10', 6.0]);
+ie7.push(['9/10', 10.5]);
+ie8.push(['9/10', 28.7]);
+ie9.push(['9/10', 0.0]);
+ie10.push(['9/10', 0]);
+ie11.push(['9/10', 0]);
+ie12.push(['9/10', 0]);
+chartoptions.xAxis.categories.push('10/10');
+ie6.push(['10/10', 5.5]);
+ie7.push(['10/10', 9.9]);
+ie8.push(['10/10', 28.5]);
+ie9.push(['10/10', 0.0]);
+ie10.push(['10/10', 0]);
+ie11.push(['10/10', 0]);
+ie12.push(['10/10', 0]);
+chartoptions.xAxis.categories.push('11/10');
+ie6.push(['11/10', 4.9]);
+ie7.push(['11/10', 9.3]);
+ie8.push(['11/10', 28.2]);
+ie9.push(['11/10', 0.0]);
+ie10.push(['11/10', 0]);
+ie11.push(['11/10', 0]);
+ie12.push(['11/10', 0]);
+chartoptions.xAxis.categories.push('12/10');
+ie6.push(['12/10', 4.6]);
+ie7.push(['12/10', 10.9]);
+ie8.push(['12/10', 26.5]);
+ie9.push(['12/10', 0.0]);
+ie10.push(['12/10', 0]);
+ie11.push(['12/10', 0]);
+ie12.push(['12/10', 0]);
+chartoptions.xAxis.categories.push('1/11');
+ie6.push(['1/11', 4.0]);
+ie7.push(['1/11', 10.1]);
+ie8.push(['1/11', 26.4]);
+ie9.push(['1/11', 0.2]);
+ie10.push(['1/11', 0]);
+ie11.push(['1/11', 0]);
+ie12.push(['1/11', 0]);
+chartoptions.xAxis.categories.push('2/11');
+ie6.push(['2/11', 3.6]);
+ie7.push(['2/11', 9.8]);
+ie8.push(['2/11', 26.6]);
+ie9.push(['2/11', 0.5]);
+ie10.push(['2/11', 0]);
+ie11.push(['2/11', 0]);
+ie12.push(['2/11', 0]);
+chartoptions.xAxis.categories.push('3/11');
+ie6.push(['3/11', 3.3]);
+ie7.push(['3/11', 9.2]);
+ie8.push(['3/11', 26.3]);
+ie9.push(['3/11', 1.0]);
+ie10.push(['3/11', 0]);
+ie11.push(['3/11', 0]);
+ie12.push(['3/11', 0]);
+chartoptions.xAxis.categories.push('4/11');
+ie6.push(['4/11', 3.0]);
+ie7.push(['4/11', 8.7]);
+ie8.push(['4/11', 24.9]);
+ie9.push(['4/11', 2.3]);
+ie10.push(['4/11', 0]);
+ie11.push(['4/11', 0]);
+ie12.push(['4/11', 0]);
+chartoptions.xAxis.categories.push('5/11');
+ie6.push(['5/11', 3.0]);
+ie7.push(['5/11', 9.0]);
+ie8.push(['5/11', 22.9]);
+ie9.push(['5/11', 3.9]);
+ie10.push(['5/11', 0]);
+ie11.push(['5/11', 0]);
+ie12.push(['5/11', 0]);
+chartoptions.xAxis.categories.push('6/11');
+ie6.push(['6/11', 2.9]);
+ie7.push(['6/11', 8.1]);
+ie8.push(['6/11', 20.9]);
+ie9.push(['6/11', 5.2]);
+ie10.push(['6/11', 0.0]);
+ie11.push(['6/11', 0]);
+ie12.push(['6/11', 0]);
+chartoptions.xAxis.categories.push('7/11');
+ie6.push(['7/11', 2.8]);
+ie7.push(['7/11', 7.7]);
+ie8.push(['7/11', 19.7]);
+ie9.push(['7/11', 6.1]);
+ie10.push(['7/11', 0.0]);
+ie11.push(['7/11', 0]);
+ie12.push(['7/11', 0]);
+chartoptions.xAxis.categories.push('8/11');
+ie6.push(['8/11', 2.7]);
+ie7.push(['8/11', 7.7]);
+ie8.push(['8/11', 19.1]);
+ie9.push(['8/11', 6.7]);
+ie10.push(['8/11', 0.0]);
+ie11.push(['8/11', 0]);
+ie12.push(['8/11', 0]);
+chartoptions.xAxis.categories.push('9/11');
+ie6.push(['9/11', 2.3]);
+ie7.push(['9/11', 7.5]);
+ie8.push(['9/11', 19.1]);
+ie9.push(['9/11', 7.2]);
+ie10.push(['9/11', 0.0]);
+ie11.push(['9/11', 0]);
+ie12.push(['9/11', 0]);
+chartoptions.xAxis.categories.push('10/11');
+ie6.push(['10/11', 2.3]);
+ie7.push(['10/11', 7.1]);
+ie8.push(['10/11', 18.1]);
+ie9.push(['10/11', 7.5]);
+ie10.push(['10/11', 0.0]);
+ie11.push(['10/11', 0]);
+ie12.push(['10/11', 0]);
+chartoptions.xAxis.categories.push('11/11');
+ie6.push(['11/11', 1.6]);
+ie7.push(['11/11', 6.9]);
+ie8.push(['11/11', 17.5]);
+ie9.push(['11/11', 7.7]);
+ie10.push(['11/11', 0.0]);
+ie11.push(['11/11', 0]);
+ie12.push(['11/11', 0]);
+chartoptions.xAxis.categories.push('12/11');
+ie6.push(['12/11', 1.5]);
+ie7.push(['12/11', 6.5]);
+ie8.push(['12/11', 16.1]);
+ie9.push(['12/11', 8.0]);
+ie10.push(['12/11', 0.0]);
+ie11.push(['12/11', 0]);
+ie12.push(['12/11', 0]);
+chartoptions.xAxis.categories.push('1/12');
+ie6.push(['1/12', 1.3]);
+ie7.push(['1/12', 6.1]);
+ie8.push(['1/12', 15.7]);
+ie9.push(['1/12', 8.6]);
+ie10.push(['1/12', 0.0]);
+ie11.push(['1/12', 0]);
+ie12.push(['1/12', 0]);
+chartoptions.xAxis.categories.push('2/12');
+ie6.push(['2/12', 1.3]);
+ie7.push(['2/12', 5.8]);
+ie8.push(['2/12', 15.1]);
+ie9.push(['2/12', 9.4]);
+ie10.push(['2/12', 0.0]);
+ie11.push(['2/12', 0]);
+ie12.push(['2/12', 0]);
+chartoptions.xAxis.categories.push('3/12');
+ie6.push(['3/12', 1.2]);
+ie7.push(['3/12', 5.6]);
+ie8.push(['3/12', 13.1]);
+ie9.push(['3/12', 11.1]);
+ie10.push(['3/12', 0.0]);
+ie11.push(['3/12', 0]);
+ie12.push(['3/12', 0]);
+chartoptions.xAxis.categories.push('4/12');
+ie6.push(['4/12', 1.0]);
+ie7.push(['4/12', 5.2]);
+ie8.push(['4/12', 12.0]);
+ie9.push(['4/12', 11.7]);
+ie10.push(['4/12', 0.0]);
+ie11.push(['4/12', 0]);
+ie12.push(['4/12', 0]);
+chartoptions.xAxis.categories.push('5/12');
+ie6.push(['5/12', 1.0]);
+ie7.push(['5/12', 5.3]);
+ie8.push(['5/12', 11.8]);
+ie9.push(['5/12', 11.8]);
+ie10.push(['5/12', 0.0]);
+ie11.push(['5/12', 0]);
+ie12.push(['5/12', 0]);
+chartoptions.xAxis.categories.push('6/12');
+ie6.push(['6/12', 0.9]);
+ie7.push(['6/12', 5.0]);
+ie8.push(['6/12', 11.4]);
+ie9.push(['6/12', 12.6]);
+ie10.push(['6/12', 0.0]);
+ie11.push(['6/12', 0]);
+ie12.push(['6/12', 0]);
+chartoptions.xAxis.categories.push('7/12');
+ie6.push(['7/12', 0.9]);
+ie7.push(['7/12', 4.7]);
+ie8.push(['7/12', 10.8]);
+ie9.push(['7/12', 12.2]);
+ie10.push(['7/12', 0.0]);
+ie11.push(['7/12', 0]);
+ie12.push(['7/12', 0]);
+chartoptions.xAxis.categories.push('8/12');
+ie6.push(['8/12', 0.7]);
+ie7.push(['8/12', 4.6]);
+ie8.push(['8/12', 10.2]);
+ie9.push(['8/12', 12.0]);
+ie10.push(['8/12', 0.1]);
+ie11.push(['8/12', 0]);
+ie12.push(['8/12', 0]);
+chartoptions.xAxis.categories.push('9/12');
+ie6.push(['9/12', 0.6]);
+ie7.push(['9/12', 4.4]);
+ie8.push(['9/12', 10.0]);
+ie9.push(['9/12', 12.5]);
+ie10.push(['9/12', 0.1]);
+ie11.push(['9/12', 0]);
+ie12.push(['9/12', 0]);
+chartoptions.xAxis.categories.push('10/12');
+ie6.push(['10/12', 0.6]);
+ie7.push(['10/12', 4.8]);
+ie8.push(['10/12', 9.7]);
+ie9.push(['10/12', 12.2]);
+ie10.push(['10/12', 0.1]);
+ie11.push(['10/12', 0]);
+ie12.push(['10/12', 0]);
+chartoptions.xAxis.categories.push('11/12');
+ie6.push(['11/12', 0.5]);
+ie7.push(['11/12', 4.8]);
+ie8.push(['11/12', 9.2]);
+ie9.push(['11/12', 13.2]);
+ie10.push(['11/12', 0.3]);
+ie11.push(['11/12', 0]);
+ie12.push(['11/12', 0]);
+chartoptions.xAxis.categories.push('12/12');
+ie6.push(['12/12', 0.6]);
+ie7.push(['12/12', 5.5]);
+ie8.push(['12/12', 8.8]);
+ie9.push(['12/12', 12.3]);
+ie10.push(['12/12', 0.6]);
+ie11.push(['12/12', 0]);
+ie12.push(['12/12', 0]);
+chartoptions.xAxis.categories.push('1/13');
+ie6.push(['1/13', 0.6]);
+ie7.push(['1/13', 6.1]);
+ie8.push(['1/13', 8.5]);
+ie9.push(['1/13', 11.7]);
+ie10.push(['1/13', 0.8]);
+ie11.push(['1/13', 0]);
+ie12.push(['1/13', 0]);
+chartoptions.xAxis.categories.push('2/13');
+ie6.push(['2/13', 0.8]);
+ie7.push(['2/13', 5.1]);
+ie8.push(['2/13', 8.3]);
+ie9.push(['2/13', 11.6]);
+ie10.push(['2/13', 0.9]);
+ie11.push(['2/13', 0]);
+ie12.push(['2/13', 0]);
+chartoptions.xAxis.categories.push('3/13');
+ie6.push(['3/13', 0.6]);
+ie7.push(['3/13', 5.2]);
+ie8.push(['3/13', 7.4]);
+ie9.push(['3/13', 9.6]);
+ie10.push(['3/13', 1.8]);
+ie11.push(['3/13', 0]);
+ie12.push(['3/13', 0]);
+chartoptions.xAxis.categories.push('4/13');
+ie6.push(['4/13', 0.4]);
+ie7.push(['4/13', 4.9]);
+ie8.push(['4/13', 6.8]);
+ie9.push(['4/13', 7.6]);
+ie10.push(['4/13', 3.3]);
+ie11.push(['4/13', 0]);
+ie12.push(['4/13', 0]);
+chartoptions.xAxis.categories.push('5/13');
+ie6.push(['5/13', 0.4]);
+ie7.push(['5/13', 5.0]);
+ie8.push(['5/13', 6.5]);
+ie9.push(['5/13', 6.0]);
+ie10.push(['5/13', 4.6]);
+ie11.push(['5/13', 0]);
+ie12.push(['5/13', 0]);
+chartoptions.xAxis.categories.push('6/13');
+ie6.push(['6/13', 0.4]);
+ie7.push(['6/13', 5.1]);
+ie8.push(['6/13', 6.0]);
+ie9.push(['6/13', 4.4]);
+ie10.push(['6/13', 6.1]);
+ie11.push(['6/13', 0]);
+ie12.push(['6/13', 0]);
+chartoptions.xAxis.categories.push('7/13');
+ie6.push(['7/13', 0.4]);
+ie7.push(['7/13', 4.7]);
+ie8.push(['7/13', 6.4]);
+ie9.push(['7/13', 4.1]);
+ie10.push(['7/13', 7.2]);
+ie11.push(['7/13', 0]);
+ie12.push(['7/13', 0]);
+chartoptions.xAxis.categories.push('8/13');
+ie6.push(['8/13', 0.3]);
+ie7.push(['8/13', 4.6]);
+ie8.push(['8/13', 7.2]);
+ie9.push(['8/13', 4.7]);
+ie10.push(['8/13', 8.1]);
+ie11.push(['8/13', 0.0]);
+ie12.push(['8/13', 0]);
+chartoptions.xAxis.categories.push('9/13');
+ie6.push(['9/13', 0.4]);
+ie7.push(['9/13', 4.6]);
+ie8.push(['9/13', 7.6]);
+ie9.push(['9/13', 4.6]);
+ie10.push(['9/13', 9.0]);
+ie11.push(['9/13', 0.0]);
+ie12.push(['9/13', 0]);
+chartoptions.xAxis.categories.push('10/13');
+ie6.push(['10/13', 0.4]);
+ie7.push(['10/13', 4.7]);
+ie8.push(['10/13', 8.1]);
+ie9.push(['10/13', 5.3]);
+ie10.push(['10/13', 10.6]);
+ie11.push(['10/13', 0.0]);
+ie12.push(['10/13', 0]);
+chartoptions.xAxis.categories.push('11/13');
+ie6.push(['11/13', 0.5]);
+ie7.push(['11/13', 3.3]);
+ie8.push(['11/13', 7.2]);
+ie9.push(['11/13', 5.0]);
+ie10.push(['11/13', 9.6]);
+ie11.push(['11/13', 1.3]);
+ie12.push(['11/13', 0]);
+chartoptions.xAxis.categories.push('12/13');
+ie6.push(['12/13', 0.5]);
+ie7.push(['12/13', 3.2]);
+ie8.push(['12/13', 4.8]);
+ie9.push(['12/13', 3.3]);
+ie10.push(['12/13', 5.3]);
+ie11.push(['12/13', 4.9]);
+ie12.push(['12/13', 0]);
+chartoptions.xAxis.categories.push('1/14');
+ie6.push(['1/14', 0.4]);
+ie7.push(['1/14', 2.8]);
+ie8.push(['1/14', 4.6]);
+ie9.push(['1/14', 3.1]);
+ie10.push(['1/14', 3.9]);
+ie11.push(['1/14', 5.6]);
+ie12.push(['1/14', 0.0]);
+chartoptions.xAxis.categories.push('2/14');
+ie6.push(['2/14', 0.3]);
+ie7.push(['2/14', 3.1]);
+ie8.push(['2/14', 4.2]);
+ie9.push(['2/14', 2.8]);
+ie10.push(['2/14', 3.4]);
+ie11.push(['2/14', 5.8]);
+ie12.push(['2/14', 0.0]);
+chartoptions.xAxis.categories.push('3/14');
+ie6.push(['3/14', 0.3]);
+ie7.push(['3/14', 2.9]);
+ie8.push(['3/14', 3.9]);
+ie9.push(['3/14', 2.6]);
+ie10.push(['3/14', 3.0]);
+ie11.push(['3/14', 5.5]);
+ie12.push(['3/14', 0.0]);
+chartoptions.xAxis.categories.push('4/14');
+ie6.push(['4/14', 0.3]);
+ie7.push(['4/14', 3.3]);
+ie8.push(['4/14', 3.7]);
+ie9.push(['4/14', 2.5]);
+ie10.push(['4/14', 2.6]);
+ie11.push(['4/14', 5.6]);
+ie12.push(['4/14', 0]);
+chartoptions.xAxis.categories.push('5/14');
+ie6.push(['5/14', 0.3]);
+ie7.push(['5/14', 1.6]);
+ie8.push(['5/14', 3.8]);
+ie9.push(['5/14', 5.1]);
+ie10.push(['5/14', 2.4]);
+ie11.push(['5/14', 5.8]);
+ie12.push(['5/14', 0.0]);
+chartoptions.xAxis.categories.push('6/14');
+ie6.push(['6/14', 0.2]);
+ie7.push(['6/14', 1.3]);
+ie8.push(['6/14', 3.7]);
+ie9.push(['6/14', 5.5]);
+ie10.push(['6/14', 2.3]);
+ie11.push(['6/14', 6.1]);
+ie12.push(['6/14', 0.0]);
+chartoptions.xAxis.categories.push('7/14');
+ie6.push(['7/14', 0.3]);
+ie7.push(['7/14', 2.1]);
+ie8.push(['7/14', 4.0]);
+ie9.push(['7/14', 6.6]);
+ie10.push(['7/14', 2.6]);
+ie11.push(['7/14', 5.6]);
+ie12.push(['7/14', 0.0]);
+chartoptions.xAxis.categories.push('8/14');
+ie6.push(['8/14', 0.3]);
+ie7.push(['8/14', 2.1]);
+ie8.push(['8/14', 4.4]);
+ie9.push(['8/14', 5.8]);
+ie10.push(['8/14', 2.5]);
+ie11.push(['8/14', 6.0]);
+ie12.push(['8/14', 0]);
+chartoptions.xAxis.categories.push('9/14');
+ie6.push(['9/14', 0.2]);
+ie7.push(['9/14', 1.7]);
+ie8.push(['9/14', 3.7]);
+ie9.push(['9/14', 3.1]);
+ie10.push(['9/14', 2.3]);
+ie11.push(['9/14', 7.3]);
+ie12.push(['9/14', 0]);
+chartoptions.xAxis.categories.push('10/14');
+ie6.push(['10/14', 0.2]);
+ie7.push(['10/14', 1.4]);
+ie8.push(['10/14', 2.9]);
+ie9.push(['10/14', 2.5]);
+ie10.push(['10/14', 2.3]);
+ie11.push(['10/14', 8.6]);
+ie12.push(['10/14', 0]);
+chartoptions.xAxis.categories.push('11/14');
+ie6.push(['11/14', 0.1]);
+ie7.push(['11/14', 1.1]);
+ie8.push(['11/14', 2.6]);
+ie9.push(['11/14', 2.2]);
+ie10.push(['11/14', 1.9]);
+ie11.push(['11/14', 7.9]);
+ie12.push(['11/14', 0]);
+chartoptions.xAxis.categories.push('12/14');
+ie6.push(['12/14', 0.2]);
+ie7.push(['12/14', 1.3]);
+ie8.push(['12/14', 4.1]);
+ie9.push(['12/14', 2.3]);
+ie10.push(['12/14', 1.8]);
+ie11.push(['12/14', 7.9]);
+ie12.push(['12/14', 0]);
+chartoptions.xAxis.categories.push('1/15');
+ie6.push(['1/15', 0.2]);
+ie7.push(['1/15', 1.3]);
+ie8.push(['1/15', 2.7]);
+ie9.push(['1/15', 2.1]);
+ie10.push(['1/15', 1.7]);
+ie11.push(['1/15', 9.2]);
+ie12.push(['1/15', 0.0]);
+chartoptions.xAxis.categories.push('2/15');
+ie6.push(['2/15', 0.2]);
+ie7.push(['2/15', 1.0]);
+ie8.push(['2/15', 2.6]);
+ie9.push(['2/15', 2.3]);
+ie10.push(['2/15', 1.9]);
+ie11.push(['2/15', 8.9]);
+ie12.push(['2/15', 0.0]);
+chartoptions.xAxis.categories.push('3/15');
+ie6.push(['3/15', 0.1]);
+ie7.push(['3/15', 0.9]);
+ie8.push(['3/15', 2.1]);
+ie9.push(['3/15', 2.0]);
+ie10.push(['3/15', 1.7]);
+ie11.push(['3/15', 9.3]);
+ie12.push(['3/15', 0.0]);
+chartoptions.xAxis.categories.push('4/15');
+ie6.push(['4/15', 0.1]);
+ie7.push(['4/15', 0.7]);
+ie8.push(['4/15', 1.9]);
+ie9.push(['4/15', 2.4]);
+ie10.push(['4/15', 2.0]);
+ie11.push(['4/15', 9.2]);
+ie12.push(['4/15', 0.0]);
+chartoptions.xAxis.categories.push('5/15');
+ie6.push(['5/15', 0.1]);
+ie7.push(['5/15', 0.6]);
+ie8.push(['5/15', 2.0]);
+ie9.push(['5/15', 2.1]);
+ie10.push(['5/15', 1.9]);
+ie11.push(['5/15', 8.9]);
+ie12.push(['5/15', 0.0]);
+chartoptions.xAxis.categories.push('6/15');
+ie6.push(['6/15', 0.2]);
+ie7.push(['6/15', 0.7]);
+ie8.push(['6/15', 1.9]);
+ie9.push(['6/15', 1.6]);
+ie10.push(['6/15', 1.3]);
+ie11.push(['6/15', 7.9]);
+ie12.push(['6/15', 0.0]);
+chartoptions.xAxis.categories.push('7/15');
+ie6.push(['7/15', 0.2]);
+ie7.push(['7/15', 0.9]);
+ie8.push(['7/15', 1.5]);
+ie9.push(['7/15', 1.9]);
+ie10.push(['7/15', 1.2]);
+ie11.push(['7/15', 7.7]);
+ie12.push(['7/15', 0.1]);
+chartoptions.xAxis.categories.push('8/15');
+ie6.push(['8/15', 0.2]);
+ie7.push(['8/15', 0.8]);
+ie8.push(['8/15', 1.2]);
+ie9.push(['8/15', 2.3]);
+ie10.push(['8/15', 1.1]);
+ie11.push(['8/15', 7.2]);
+ie12.push(['8/15', 0.4]);
+    chartoptions.series.push({name: 'Internet Explorer 6', data: ie6 });
+    chartoptions.series.push({name: 'Internet Explorer 7', data: ie7 });
+    chartoptions.series.push({name: 'Internet Explorer 8', data: ie8 });
+    chartoptions.series.push({name: 'Internet Explorer 9', data: ie9 });
+    chartoptions.series.push({name: 'Internet Explorer 10', data: ie10 });
+    chartoptions.series.push({name: 'Internet Explorer 11', data: ie11 });
+    chartoptions.series.push({name: 'Edge 12', data: ie12 });
+    chartoptions.title.text = "Internet Explorer Versions By Month";
+
+    $('#graph2').highcharts(chartoptions);
+
+});
+</script>
+
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+
+    </div><!-- //wrap -->
+    <div id="footer">
+      Copyright &copy; 2004-2015 &nbsp;<a href="http://www.awio.com">Awio Web Services LLC</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/cdn-cgi/l/email-protection#046560696d6a447337676b716a7061762a676b69">Contact</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/legal/terms">Terms of Service</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/legal/privacy">Privacy Policy</a>
+
+      <!-- Quantcast Tag -->
+      <script type="text/javascript">
+      var _qevents = _qevents || [];
+
+      (function() {
+      var elem = document.createElement('script');
+      elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+      elem.async = true;
+      elem.type = "text/javascript";
+      var scpt = document.getElementsByTagName('script')[0];
+      scpt.parentNode.insertBefore(elem, scpt);
+      })();
+
+      _qevents.push({
+      qacct:"p-bdUJejYHg9Ff-"
+      });
+      </script>
+
+      <noscript>
+      <div style="display:none;">
+      <img src="//pixel.quantserve.com/pixel/p-bdUJejYHg9Ff-.gif" border="0" height="1" width="1" alt="Quantcast"/>
+      </div>
+      </noscript>
+      <!-- End Quantcast tag -->
+
+      <!-- Begin W3Counter Secure Tracking Code -->
+      <script type="text/javascript" src="https://www.w3counter.com/securetracker.js"></script>
+      <script type="text/javascript">
+      w3counter(1);
+      </script>
+      <noscript>
+      <div><a href="http://www.w3counter.com"><img src="https://www.w3counter.com/tracker.php?id=1" style="border: 0" alt="W3Counter" /></a></div>
+      </noscript>
+      <!-- End W3Counter Secure Tracking Code-->
+
+      <!-- Begin W3Counter Pulse Real-Time Heartbeat Code -->
+      <script type="text/javascript">
+      (function(){
+        var ps = document.createElement('script');
+         ps.type = 'text/javascript';
+         ps.async = true;
+         ps.src = '//pulse.w3counter.com/pulse.js?id=1';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ps);
+      })();
+      </script>
+      <!-- End W3Counter Pulse Real-Time Heartbeat Code-->
+
+      <script type="text/javascript">
+      Shopify = { shop: 'www.w3counter.com' };
+      </script>
+      <script type="text/javascript" src="https://icf.improvely.com/icf-button.js?shop=www.w3counter.com"></script>
+
+    </div>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>

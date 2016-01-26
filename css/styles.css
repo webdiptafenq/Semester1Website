@@ -1,0 +1,262 @@
+/*-------general css-------*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;/*----------check for vendor prefix---------*/
+}
+
+body{
+background-color:#000;
+font-size: 1em;
+color: #f0f0f0;
+}
+
+h1{
+font-size: 1.6rem;
+color: #00BF32;
+
+}
+
+h2{
+font-size: 1.2rem;
+color: #00BF32;
+}
+
+h3{
+font-size: 1.1rem;
+color: #00BF32;
+}
+
+li{
+
+list-style: none;
+
+}
+
+a{
+color: #64DF85;
+}
+
+p{
+font-size: 1em;
+}
+
+
+
+/*----------------header----------------*/
+
+
+
+.page-header{
+width: 100%;
+height: auto;
+text-align: center;
+}
+
+
+
+img.header-img{
+width: 98%;
+height: auto;
+margin: 1%;
+max-width: 250px;
+border-radius: 200%;
+box-shadow: 1px 1px 3px #00BF32; /*--------- need to add vendor prefixes--------*/
+}
+
+.header-right{
+text-align: center;
+}
+
+.header-right p{
+font-size: 1.2rem;
+text-shadow: 2px 2px 5px #00BF32;
+}
+
+/*----------------navbar-----------------*/
+
+nav {
+margin-top: 10px;
+width: 100%;
+height: 50px;
+background-color: #555555;
+}
+
+nav ul{
+text-align: center;
+}
+
+nav ul li{
+display: inline;
+border-right: 1px #000 solid;
+padding: 15px 2%;
+height: 50px;
+
+}
+
+nav ul li:last-child{
+border: none;
+}
+
+nav ul li a{
+
+color: #fff;
+line-height: 50px;
+text-decoration: none;
+font-size: 0.8rem;
+}
+
+nav ul li a:hover{
+color: #e4e4e4;
+}
+
+
+
+
+
+/*-----------------body------------------*/
+
+
+
+section.cluster{
+width: 98%;
+height: auto;
+margin: 2% 1% 1% 1%;
+}
+
+section.cluster h1{
+text-align: center;
+color: hsla(136, 100%, 37%, 1) 
+}
+
+.unit-group{
+margin-top: 2%;
+}
+
+
+.unit{
+margin: 0 3% 5% 3%;
+background-color: #252525;
+border-radius: 10px;
+box-shadow: 0px 0px 5px #f0f0f0;
+}
+
+.unit h2{
+text-align: center;
+padding: 10px 10px 0 10px;
+
+}
+
+.unit h3{
+padding-top: 10px;
+padding-left: 20px;
+}
+
+
+
+.unit li{
+font-size: 0.8rem;
+line-height: 1.2rem;
+padding: 5px 10px;
+
+}
+
+li.element-title{
+font-weight: bold;
+padding-top: 15px;
+text-shadow: 1px 1px 1px #00BF32;
+}
+
+ul.sub-element{
+padding-left: 20px;
+list-style: none;
+
+}
+
+
+.assessments{
+margin: 0 auto 5% auto;
+background-color: #252525;
+border-radius: 10px;
+box-shadow: 0px 0px 5px #f0f0f0;
+}
+
+.assessments h2{
+text-align: center;
+}
+
+.assessments li{
+font-size: 0.8rem;
+line-height: 1.2rem;
+padding: 5px 10px;
+text-align: center;
+}
+
+.sidebar{
+display:none;
+}
+
+/*-----------------body end-------------*/
+
+/*-----------------everything under here is for screen size above 492px-------------*/
+@media screen and (min-width: 492px) {
+   
+/*--------------general styles-------------------*/
+   body {
+       
+		
+    }
+	
+
+	
+/*-----------------nav bar------------------------*/
+
+/*-------------------body-------------------------*/
+section{
+
+}
+
+.unit-group{
+float: left;
+
+width: 70%;
+height: auto;
+}
+
+.unit{
+margin: 0 auto 5% auto;
+
+}
+
+.assessments{
+width: 70%;
+height: auto;
+float: left;
+margin: 0 0 5% 0;
+}
+
+.sidebar{
+display:block;
+margin: 2% 3% 5% 3%;
+background-color: #252525;
+border-radius: 10px;
+box-shadow: 0px 0px 5px #f0f0f0;
+width:24%;
+height: 500px;
+float: right;
+
+}
+
+.sidebar p{
+font-size: 0.8rem;
+}
+
+	
+
+}
+
+/*----------------------all mobile under here-------------------------------------*/
+
+/*----------------------page 2 styles here-------------------------------------*/
+
+

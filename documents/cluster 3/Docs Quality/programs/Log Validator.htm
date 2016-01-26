@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>W3C Log Validator</title>
+	<meta name="Keywords" content="qa, quality assurance, conformance, validity, test suite, log, validator, html, css" />
+	<meta name="Description" content="W3C QA - A comprehensive, step-by-step validation tool for webmasters" />
+	<link rel="schema.DC" href="http://purl.org/dc" />
+	<meta name="DC.Subject" lang="en" content="log, validator, html, css" />
+	<meta name="DC.Title" lang="en" content="Log Validator" />
+	<meta name="DC.Description.Abstract" lang="en" content="A comprehensive, step-by-step validation tool for webmasters" />
+	<meta name="DC.Date.Created" content="2002-06-24" />
+	<meta name="DC.Language" scheme="RFC1766" content ="en" />
+	<meta name="DC.Creator" content="Olivier  Thereaux" />
+	<meta name="DC.Publisher" content="W3C - World Wide Web Consortium - http://www.w3.org" />
+	<meta name="DC.Rights" content="http://www.w3.org/Consortium/Legal/copyright-documents-19990405" />
+    <style type="text/css" media="all">
+    @import "/QA/2006/01/blogstyle.css";
+	dt {font-weight: bold; } 
+	dd p { margin-top: 0.2em !important; }
+    </style>
+</head>
+<body>
+    <div id="banner">
+      <h1 id="title">
+	<a href="http://www.w3.org/"><img height="48" alt="W3C" id="logo" src="http://www.w3.org/Icons/WWW/w3c_home_nb" /></a>
+        Log Validator
+</h1>
+    </div>
+    
+    <ul class="navbar" id="menu">
+        <li><a href="Screenshots/" title="See The Log Validator in action">Screenshots</a></li>
+        <li><a href="Manual" title="Log Validator Manual">Manual</a></li>
+		<li><a href="Manual-Get">Download</a></li>
+        <li><a href="./#participate">Feedback / Participate</a></li>
+    </ul>
+
+<div id="searchbox">
+<form method="get" action="http://www.google.com/custom" enctype="application/x-www-form-urlencoded">
+<p id="formbox"><input type="text" size="15" class="textfield" name="q" accesskey="E" maxlength="255" /> <input type="submit" class="submitfield" value="Search" id="goButton" name="sa" accesskey="G" /> <input type="hidden" name="cof" value="T:black;LW:72;ALC:#ff3300;L:http://www.w3.org/Icons/w3c_home;LC:#000099;LH:48;BGC:white;AH:left;VLC:#660066;GL:0;AWFID:0b9847e42caf283e;" /><input type="hidden" id="searchW3C" name="sitesearch" checked="checked" value="www.w3.org/QA" /><input type="hidden" name="domains" value="www.w3.org/QA" /></p>
+</form>
+</div>
+
+
+
+    <div id="main"><!-- This DIV encapsulates everything in this page - necessary for the positioning -->
+		        <div id="jumpbar">
+		         <h2>About the W3C Log Validator</h2>
+		         <p><strong>The Log Validator combines a Server Log analysis engine with batch validation, link 
+			     checking and other quality-oriented processing, for step-by-step improvement and maintenance of
+				 Web Site Quality</strong>.</p>
+
+
+			<h3>More W3C Software</h3>
+
+		<p>W3C develops many more software tools. See the other <a href="../">Quality Tools (validators, etc)</a>,
+			or the list of all <a href="/Status">W3C Open Source Software</a>.</p>
+			<h3 id="contact">Contact</h3>
+			<p>
+			<a href="http://lists.w3.org/Archives/Public/www-validator/">Validator(s) mailing-list at W3C</a>.
+			</p>
+
+
+		</div>
+
+<h2>Log Validator mini-FAQ</h2>
+<dl>
+<dt>What is this?</dt>
+	<dd><p>A free, simple and step-by-step tool to improve dramatically the quality of your website. Find
+		the most popular invalid documents, broken links, etc., and prioritize the work to get them fixed.</p></dd>
+<dt>Who should use this?</dt>
+	<dd><p>Anyone writing or maintaining websites, especially large ones.</p></dd>
+<dt>Where is the documentation?</dt>
+	<dd><p>All the information on how to use this tool is in the <a href="Manual">Manual</a>.</p></dd>
+<dt id="download">Where do I get it?</dt>
+	<dd><p>See the <a href="Manual-Get">download instructions</a>.</p></dd>
+<dt>I'm a developer, can I help? ・ Where can I report bugs?</dt>
+	<dd><p>The tool is open source, developers are welcome to help, and bug reports are welcome, too.
+		See <a href="#participate">below</a> for details on participation and feedback.</p></dd>
+</dl>
+
+
+<p>
+Still unclear what exactly the tool does?</p>
+<ul>
+<li> <strong>See</strong> the <a href="Screenshots/">Screenshots and examples of use</a>, </li>
+<li><strong>Read</strong> <a href="Testimonials">what others say about it</a>,</li>
+<li>or simply read on for more info.</li>
+</ul>
+
+
+<h2 id="about">The "Philosophy" of the LogValidator</h2>
+<h3>Step-by-step quality</h3>
+<p>
+Log Validator is a web server log analysis tool with focus on the quality of Web documents.
+Thanks to a modular, extensible design, the Log Validator can help Web authors find the most 
+popular content on their web site that matches particular criteria.</p>
+
+<p>
+The Log Validator was first written with Validation (HTML, etc.) in
+mind : it can thus help web content managers find and fix the most 
+frequently accessed invalid documents on their Web site, acting as a 
+comprehensive, <a href="/QA/2002/09/Step-by-step">step-by-step</a>
+validation tool.</p>
+
+<h3 id="whatitdoes">What this tool does (and does not)</h3>
+
+<p>This tool takes a web server's last logs and processes it through <em>validation 
+modules</em>. Those <em>validation modules</em> check the most popular documents' 
+validity for a certain technology . The default module is HTML validation, but there
+are others available (see the <a href="API#modules-list">list of modules</a> for 
+supported technologies).</p> <p>The (X)HTML validation module, for example, helps you
+find, among the most popular pages on your site, which are invalid, and thus tell you 
+which (invalid) pages you should fix first. This is a step-by-step process, you can 
+set up this tool to run every week, and painlessly fix only a few documents at the 
+time. Eventually, you will have fixed your whole site, or at least the most important 
+parts of it. (see also <a href="http://www.w3.org/QA/Tools/LogValidator/Manual#tips">
+tips</a> for the HTML module)</p>
+
+
+
+<h2 id="bgd">A bit of History</h2>
+
+<p>Since 1994 and the <a href="http://lists.w3.org/Archives/Public/www-html/1994Jul/0015">
+first HTML validator service</a>, there has been a way to check the validity of one's 
+webpage with regards to web standards (HTML, CSS, ...). Other services, like 
+<a href="http://www.w3.org/People/Raggett/tidy/">HTML Tidy</a> allow you to 
+(semi-)automatically fix invalid documents...</p>
+
+<p>This tool is here to make your life as a webmaster, web designer, web developer even 
+easier, by telling you which documents you should fix in priority.</p>
+
+<p>It has first been developed by <a href="/People/Gerald/">Gerald Oskoboiny</a> as 
+an internal W3C tool (yes, even at W3C we create invalid HTML sometimes) to check the 
+HTML validity of the webpages on <a href="http://www.w3.org/">the W3C website</a>, then 
+<a href="http://lists.w3.org/Archives/Public/www-qa/2001Sep/0031.html">released its code</a> 
+in september 2001.</p>
+
+<p>In 2002, the <a href="/QA">Quality Assurance</a> team at W3C decided to re-write 
+it as a modular, portable, and easy-to-use tool for webmasters. Its development continues, mostly
+with the addition of new processing modules making the Log Validator a very useful and versatile 
+Web Quality analysis tool.</p>                                                         
+
+
+<h2 id="participate">How to Participate</h2>
+<h3>bug reports</h3>
+<p>Anyone is welcome to provide bug reports, bug fixes, improvement and
+patches, ideas, etc. Submissions should be sent to the 
+<a href="http://lists.w3.org/Archives/Public/www-validator/">
+<code>www-validator</code> mailing list</a> 
+(<a href="mailto:www-validator@w3.org">send mail</a>). 
+Please note that any mail sent to this list will be <strong>publicly 
+archived and available</strong>, do not send information you wouldn't want to see 
+distributed, such as private data.
+</p>
+
+<p><a href="Manual-Get#get-dev">Source code</a> for this tool is available under 
+the <a href="http://www.w3.org/Consortium/Legal/copyright-software.html">
+W3C Software Licence</a>.</p>
+
+<h3>Additional modules</h3>
+<p>You are welcome to develop and submit additional modules (learn more about the 
+<a href="Manual-Modules">Modules creation documentation</a> and
+ <a href="API">API</a> for the modules).</p>
+
+<h3>Translations</h3>
+<p>Translation of the documentation is welcome. If you translate these
+documents, please contact us so that we can include your translation to
+the alternate versions of this manual. (See more about translations of
+W3C documents).</p>
+
+<h3 id="thanks">Acknowlegements</h3>
+<p>Many thanks to...</p>
+<ul>
+	<li>Karl Dubost, for his ideas, his patience when testing early versions, 
+	and continuous help on this project.</li>
+	<li>Terje Bless, for his coding improvement proposals</li>
+	<li>Ville Skytta, for patches, good ideas and suggestions</li>
+	<li>Aaron Straup Cope, for his knowledge of all things Perl</li>
+	<li>Slaven Rezic, for patches and bug reports</li>
+	<li>... </li>
+</ul>
+
+
+</div><!-- main -->
+
+<!-- Footer -->
+
+<address class="author">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml10" height="31" width="88"
+        alt="Valid XHTML 1.0!" /></a> Created Date: 2002-07-24 by <a href="http://www.w3.org/People/olivier/">Olivier Thereaux</a><br />
+Last modified $Date: 2007/08/31 00:08:12 $ by $Author: ot $</address>
+    
+    <p class="copyright">
+      <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> &copy; 1994-2006
+      <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a>&reg;
+      (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>,
+      <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>,
+      <a href="http://www.keio.ac.jp/">Keio</a>),
+      All Rights Reserved.
+      W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
+      <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+      and <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-software">software licensing</a>
+      rules apply. Your interactions with this site are in accordance
+      with our <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">public</a> and
+      <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</a> privacy
+      statements.
+    </p>
+
+</body>
+</html>
